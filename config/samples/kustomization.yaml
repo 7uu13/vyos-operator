@@ -1,0 +1,4 @@
+## Append samples of your project ##
+resources:
+- vyos_v1_firewallrule.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples

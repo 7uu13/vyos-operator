@@ -1,0 +1,14 @@
+apiVersion: vyos.vyos.kubebuilder.io/v1
+kind: FirewallRule
+metadata:
+  labels:
+    app.kubernetes.io/name: vyos-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: firewallrule-sample
+spec:
+  protocol: "IPv4"                  
+  chain: "forward"                  
+  ruleID: 100                      
+  action: "accept"          
+  source: "192.168.1.0/24"  
+  destination: "10.0.0.0/24" 

@@ -1,0 +1,32 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: manager-role
+rules:
+- apiGroups:
+  - vyos.vyos.kubebuilder.io
+  resources:
+  - firewallrules
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - vyos.vyos.kubebuilder.io
+  resources:
+  - firewallrules/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - vyos.vyos.kubebuilder.io
+  resources:
+  - firewallrules/status
+  verbs:
+  - get
+  - patch
+  - update
